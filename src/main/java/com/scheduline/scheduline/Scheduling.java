@@ -5,10 +5,10 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Scheduling {
-    @Scheduled(cron = "* 0 6-20 * * 0-4")
+    @Scheduled(cron = "* 30 * 15,30 * * ")
     public void SchedulerTask()
     {
-        System.out.println("runs a job every hour from 6:00 AM to 8:00 PM on weekdays");
+        System.out.println("runs a job every 30 minutes on the 15th and 30th day of every month.");
     }
 
 }
